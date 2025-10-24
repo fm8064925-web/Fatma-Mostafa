@@ -1,17 +1,19 @@
-def calculate_factorial():
+def remove_from_list():
     
-    N = int(input("Enter a positive integer: "))
-    
-    
-    result = 1
+    my_list = ['Apple', 'Banana', 'Cherry', 'Data']
     
     
-    for i in range(1, N + 1):
+    item_to_remove = input("Enter the item you want to remove: ")
+    
+    
+    if item_to_remove in my_list:
         
-        result *= i
+        my_list.remove(item_to_remove)
+        print(f"{item_to_remove} has been removed successfully.")
+    else:
+        
+        print(f"{item_to_remove} was not found in the list.")
     
-    
-    print(f"The factorial of {N} is: {result}")
 
-
-calculate_factorial()
+    print("Updated list:", my_list)
+remove_from_list()
